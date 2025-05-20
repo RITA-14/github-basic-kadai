@@ -1,0 +1,72 @@
+PS C:\Users\toshi> cd git_challenge
+PS C:\Users\toshi\git_challenge> New-Item hello_world.txt
+
+
+    ディレクトリ: C:\Users\toshi\git_challenge
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2025/05/20     23:23              0 hello_world.txt 
+
+
+PS C:\Users\toshi\git_challenge> git init
+Initialized empty Git repository in C:/Users/toshi/git_challenge/.git/
+PS C:\Users\toshi\git_challenge> echo hello,world!
+hello
+world!
+PS C:\Users\toshi\git_challenge> git add hello_world.txt
+PS C:\Users\toshi\git_challenge> git commit -m "Add hello_world.txt"
+[main (root-commit) 8570bb1] Add hello_world.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+PS C:\Users\toshi\git_challenge> git stutes
+git: 'stutes' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+PS C:\Users\toshi\git_challenge> git add hello_world.txt
+PS C:\Users\toshi\git_challenge> echo "こんにちわ世界"
+こんにちわ世界
+
+PS C:\Users\toshi\git_challenge> git show
+commit 8570bb168ed51d177a37dea38f289496a06de814 (HEAD -> main)
+Author: RITA-14 <toshiyuki_morita-28@outlook.jp>
+Date:   Tue May 20 23:27:03 2025 +0900
+
+    Add hello_world.txt
+
+diff --git a/hello_world.txt b/hello_world.txt
+new file mode 100644
+index 0000000..e69de29
+PS C:\Users\toshi\git_challenge> git add hello_world
+fatal: pathspec 'hello_world' did not match any files
+PS C:\Users\toshi\git_challenge> git add hello_world.txt
+PS C:\Users\toshi\git_challenge> echo "こんにちわ世界"
+こんにちわ世界
+
+PS C:\Users\toshi\git_challenge> git add hello_world.txt
+PS C:\Users\toshi\git_challenge> echo "hello world!" >> hello_world.txt
+PS C:\Users\toshi\git_challenge> git add hello_world.txt
+PS C:\Users\toshi\git_challenge> git commit -m "hello_world"
+[main 3870620] hello_world
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\toshi\git_challenge> git add hello_world.txt    
+
+PS C:\Users\toshi\git_challenge> echo "こんにちわ世界" >> hello_world.txt
+
+PS C:\Users\toshi\git_challenge> git add hello_world.txt
+PS C:\Users\toshi\git_challenge> git commit -m "日本語訳を追記"
+[main 0062404] 日本語訳を追記
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+PS C:\Users\toshi\git_challenge> git show
+commit 00624044434c0ace93170bb28cb5b32433ec89b9 (HEAD -> main)
+Author: RITA-14 <toshiyuki_morita-28@outlook.jp>
+Date:   Wed May 21 00:04:11 2025 +0900
+
+    日本語訳を追記
+
+diff --git a/hello_world.txt b/hello_world.txt
+index 86ab48f..c595e61 100644
+Binary files a/hello_world.txt and b/hello_world.txt differ    
