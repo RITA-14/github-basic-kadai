@@ -1,0 +1,41 @@
+PS C:\Users\toshi> cd git_challenge
+PS C:\Users\toshi\git_challenge> mkdir git_kadai_005
+
+
+    ディレクトリ: C:\Users\toshi\git_challenge
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2025/05/22      9:33                git_kadai_005
+
+
+PS C:\Users\toshi\git_challenge> git init
+Reinitialized existing Git repository in C:/Users/toshi/git_challenge/.git/
+PS C:\Users\toshi\git_challenge> New-Item hello_world.txt
+New-Item : ファイル 'C:\Users\toshi\git_challenge\hello_world.txt' は既に存在し
+ます。
+発生場所 行:1 文字:1
++ New-Item hello_world.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\toshi\...hello_world.txt:St  
+   ring) [New-Item], IOException
+    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewI  
+   temCommand
+
+PS C:\Users\toshi\git_challenge> echo "hello_world!" >> hello_world.txt
+PS C:\Users\toshi\git_challenge> git add hello_world.txt
+PS C:\Users\toshi\git_challenge> git commit -m "Add hello_world.txt"
+[main 05f6b37] Add hello_world.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\toshi\git_challenge> echo "こんにちわ世界!" >> hello_world.txt
+PS C:\Users\toshi\git_challenge> git add hello_world.txt
+PS C:\Users\toshi\git_challenge> git commit -m "日本語訳を追記"
+[main 236426f] 日本語訳を追記
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\toshi\git_challenge> git log --oneline
+236426f (HEAD -> main) 日本語訳を追記
+05f6b37 Add hello_world.txt
+0062404 日本語訳を追記
+3870620 hello_world
+8570bb1 Add hello_world.txt
