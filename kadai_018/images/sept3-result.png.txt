@@ -1,0 +1,8 @@
+127.0.0.1/lesson/users/		http://localhost/phpmyadmin/index.php?route=/table/sql&db=lesson&table=users
+SQL は正常に実行されました。
+
+SELECT age,COUNT(*) FROM users GROUP BY age HAVING age = 59;
+
+
+
+59	3	
